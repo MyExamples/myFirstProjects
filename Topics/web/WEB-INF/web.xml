@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+  <servlet>
+   <servlet-name>WelcomeName</servlet-name>
+   <servlet-class>forum.Welcome</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+ <servlet-name>WelcomeName</servlet-name> <!-- Specify which servlet to handle url=welcome.htm -->
+ <url-pattern>/welcome.htm</url-pattern> <!-- in JSP in parameter action (form) -->
+  </servlet-mapping>
+  
+    
+  <servlet>
+   <servlet-name>RegistrationName</servlet-name>
+   <servlet-class>forum.Registration</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>RegistrationName</servlet-name> <!-- Specify which servlet to handle url=registration.htm -->
+ <url-pattern>/registration.htm</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+   <servlet-name>ForumName</servlet-name>
+   <servlet-class>forum.Forum</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>ForumName</servlet-name> 
+ <url-pattern>/forum.htm</url-pattern>
+  </servlet-mapping>
+    
+  
+   
+  <servlet>
+   <servlet-name>InputTopicName</servlet-name>
+   <servlet-class>forum.InputTopic</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>InputTopicName</servlet-name> 
+ <url-pattern>/inputTopic.htm</url-pattern>
+  </servlet-mapping>
+  
+  
+
+
+
+  <servlet>
+   <servlet-name>InputAnswerName</servlet-name>
+   <servlet-class>forum.InputAnswer</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>InputAnswerName</servlet-name> 
+ <url-pattern>/addItem</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+ <servlet-name>InputAnswerName</servlet-name> 
+ <url-pattern>/inputAnswer.htm</url-pattern>
+  </servlet-mapping>
+    
+  
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
