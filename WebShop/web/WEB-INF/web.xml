@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+   
+   
+  <servlet>
+   <servlet-name>WelcomeName</servlet-name>
+   <servlet-class>shop.Welcome</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+ <servlet-name>WelcomeName</servlet-name> 
+ <url-pattern>/welcome.htm</url-pattern> 
+  </servlet-mapping>
+  
+    
+  <servlet>
+   <servlet-name>RegistrationName</servlet-name>
+   <servlet-class>shop.Registration</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>RegistrationName</servlet-name> <!-- указываем какой сервлет будет обрабатывать url=registration.htm -->
+ <url-pattern>/registration.htm</url-pattern>
+  </servlet-mapping>
+  
+<!-- ___________________________________________________________ -->  
+  <servlet>
+   <servlet-name>FormURLName</servlet-name>
+   <servlet-class>shop.FormURL</servlet-class>
+  </servlet>
+     
+  <servlet-mapping>
+ <servlet-name>FormURLName</servlet-name> 
+ <url-pattern>/formURL.htm</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+   <servlet-name>ShopName</servlet-name>
+   <servlet-class>shop.Shop</servlet-class>
+  </servlet>
+  
+ <!-- сервлет ShopName обрабатывает url=addItem -->
+   <servlet-mapping>
+  <servlet-name>ShopName</servlet-name>
+  <url-pattern>/addItem</url-pattern>
+   </servlet-mapping>
+  
+ <!-- ____________________________________________________________________ -->
+  
+   <servlet>
+   <servlet-name>SaveOrderName</servlet-name>
+   <servlet-class>shop.SaveOrder</servlet-class>
+  </servlet>
+  
+ <!-- сервлет SaveOrderName обрабатывает url=saveOrder -->
+   <servlet-mapping>
+  <servlet-name>SaveOrderName</servlet-name>
+  <url-pattern>/saveOrder</url-pattern>
+   </servlet-mapping>
+  
+  <!-- ____________________________________________________________________ -->
+  
+   <servlet>
+   <servlet-name>OpenAllOrderName</servlet-name>
+   <servlet-class>shop.OpenAllOrder</servlet-class>
+  </servlet>
+  
+   
+   <servlet>
+   <servlet-name>RemoveFromBasketName</servlet-name>
+   <servlet-class>shop.RemoveFromBasket</servlet-class>
+  </servlet>
+  
+ <!-- сервлет RemoveFromBasketName обрабатывает url=removeFromBasket -->
+   <servlet-mapping>
+  <servlet-name>RemoveFromBasketName</servlet-name>
+  <url-pattern>/removeFromBasket</url-pattern>
+   </servlet-mapping>
+
+   <session-config>
+        <session-timeout>
+            60
+        </session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
