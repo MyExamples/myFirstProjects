@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-//- аннотация необходима для определения типа исключения которое может случиться при работе с данными
 public class UserDAOImpl implements UserDAO {
 
     private HibernateTemplate template;
