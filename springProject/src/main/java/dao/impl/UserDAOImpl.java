@@ -45,6 +45,6 @@ public class UserDAOImpl implements UserDAO {
     @Transactional
     @Override
     public List<User> getAll() {
-        return template.find("from User");
+        return template.find("from Users");
     }
 }
